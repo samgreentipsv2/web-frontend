@@ -1,0 +1,80 @@
+import React from 'react'
+import { AuthProvider, RequireAuth } from 'react-auth-kit';
+import ReactDOM from 'react-dom/client';
+import './styles/index.scss';
+import WhyTrustUs from './pages/WhyTrustUs';
+import admin from './pages/Admin';
+import Contact from './pages/Contact';
+import ErrorPage from './pages/ErrorPage';
+import FreePredictions from './pages/FreePredictions';
+import VIP from './pages/VIP';
+import {Pricing, planLoader} from './pages/Pricing';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route
+} from "react-router-dom";
+import ResetPassword from './pages/ResetPassword';
+import Navbar from './components/Navbar';
+import Unauthorized from './pages/Unauthorized';
+// import Home from './pages/Home';
+const LazyHome = React.lazy(() => import('./pages/Home'));
+import FAQs from './pages/FAQs';
+// import FootballNews from './components/FootballNews';
+const LazyFoot = React.lazy(() => import('./components/FootballNews'));
+import Admin from './pages/Admin';
+import AdminNavbar from './components/AdminNavbar';
+import AdminLogin from './components/AdminLogin';
+import { freeloader } from './pages/FreeInplay';
+import About from './pages/About';
+import Checkout from './pages/Checkout';
+import CookieConsent from 'react-cookie-consent';
+import Lottie from 'lottie-react';
+import spinner from './assets/spinner.json'
+import AdminUser from './pages/AdminUser';
+import AdminGames from './pages/AdminGames';
+
+const Router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route >
+     <Route path='/' element={<Navbar/>}>
+       <Route index element={<React.Suspense fallback= {<Lottie  animationData={spinner}/>}><LazyHome/> </React.Suspense>} loader={freeloader}/>
+       <Route path='whytrustus' element={<WhyTrustUs/>}/>
+       <Route path='contact' element={<Contact/>}/>
+       <Route path='free-predictions' element={<FreePredictions/>}/>
+       <Route path='pricing' element={<Pricing />} loader={planLoader}/>
+       <Route path='vip' element={<RequireAuth loginPath={'/login'}><VIP/></RequireAuth>}/>
+       <Route path='privacy' element={<PrivacyPolicy/>}/>
+       <Route path='about' element={<About/>}/>
+       <Route path='checkout' element={<RequireAuth loginPath={'/login'}><Checkout/></RequireAuth>}/>
+       <Route path='football-news' element={<React.Suspense fallback= {<Lottie  animationData={spinner}/>}><LazyFoot/> </React.Suspense>}/>
+       <Route path='FAQs' element={<FAQs/>}/>
+     </Route>
+     <Route>
+        <Route path="register" element={<Register/>}/>
+        <Route path="login" element={<Login/>}/>
+        <Route path="sg-admin/login" element={<AdminLogin/>}/>
+     </Route>
+     <Route path='sg-admin/admin' element={<AdminNavbar/>}>
+       <Route path="sg-admin/admin" element={<Admin/>}/> 
+       <Route path="sg-admin/games" element={<AdminGames/>}/> 
+       <Route path="sg-admin/userstats" element={<AdminUser/>}/> 
+     </Route>
+     </Route>
+))
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+        <AuthProvider authType = {'cookie'}
+                  authName={'_auth'}
+                  cookieDomain={window.location.hostname}
+                  cookieSecure={true}
+                  >
+       <RouterProvider router={Router} />
+       </AuthProvider>
+  </React.StrictMode>,
+)
