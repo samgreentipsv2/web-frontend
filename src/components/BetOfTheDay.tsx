@@ -17,7 +17,7 @@ const BetOfTheDay = (props: Props) => {
 
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/botd`,  {
+    axios.get(`http://16.170.170.77:8000/api/botd`,  {
       headers: { 'Content-Type': 'application/json'
   
               },

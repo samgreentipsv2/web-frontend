@@ -40,7 +40,7 @@ import FAQs from './FAQs';
     
 
     useEffect(() => {
-      axios.get('http://127.0.0.1:8000/api/vipcat',  {
+      axios.get('http://16.170.170.77:8000/api/vipcat',  {
         headers: { 'Content-Type': 'application/json',
                     'Authorization': `Token ${cookieValue}`
       
@@ -59,7 +59,7 @@ import FAQs from './FAQs';
 
 
     useEffect(() => {
-       axios.get(`http://127.0.0.1:8000/api/user/${email}`,  {
+       axios.get(`http://16.170.170.77:8000/api/user/${email}`,  {
         headers: { 'Content-Type': 'application/json'
     
                 },
@@ -80,7 +80,7 @@ import FAQs from './FAQs';
 
     useEffect(() => {
 
-      axios.get('http://127.0.0.1:8000/api/plans',  {
+      axios.get('http://16.170.170.77:8000/api/plans',  {
         headers: { 'Content-Type': 'application/json'
 
                 },

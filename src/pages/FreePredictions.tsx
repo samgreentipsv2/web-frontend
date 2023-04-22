@@ -10,7 +10,7 @@ const FreePredictions = (props: Props) => {
 
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/freepred`,  {
+    axios.get(`http://16.170.170.77:8000/api/freepred`,  {
       headers: { 'Content-Type': 'application/json'
   
               },
