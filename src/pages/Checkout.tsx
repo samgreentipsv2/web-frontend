@@ -4,7 +4,6 @@ import CookieConsent from 'react-cookie-consent';
 import { PaystackButton, usePaystackPayment } from 'react-paystack';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuthUser } from 'react-auth-kit';
-import process from 'process';
 
 
 
