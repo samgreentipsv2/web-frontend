@@ -31,7 +31,7 @@ const Checkout = () => {
   useEffect(() => {
 
    
-    axios.get(`http://16.170.170.77:8000//api/plan/${searchParams.get('plan')}`,  {
+    axios.get(`http://16.16.166.53/api/plan/${searchParams.get('plan')}`,  {
       headers: { 'Content-Type': 'application/json'
   
               },
@@ -60,7 +60,7 @@ const Checkout = () => {
 
 
   const onSuccess = () => {
-   axios.post('http://16.170.170.77:8000/api/addvip',
+   axios.post('http://16.16.166.53/api/addvip',
   JSON.stringify({
  
     email: user,

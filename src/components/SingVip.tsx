@@ -37,7 +37,7 @@ const SingVip = ({category_name}: catProps) => {
       .find((row) => row.startsWith("_auth="))
       ?.split("=")[1];
 
-      axios.get(`http://16.170.170.77:8000/api/vipodd/${category}`,  {
+      axios.get(`http://16.16.166.53/api/vipodd/${category}`,  {
         headers: { 'Content-Type': 'application/json',
                     'Authorization': `Token ${cookieValue}`
 

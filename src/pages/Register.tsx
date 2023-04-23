@@ -87,7 +87,7 @@ const navigate = useNavigate();
 const RegisterFn = async (event:any) => {
   event.preventDefault()
   try{
-await axios.post('http://16.170.170.77:8000/api/auth/users/',
+await axios.post('http://16.16.166.53/api/auth/users/',
   JSON.stringify({
     first_name: firstName,
     last_name: LastName,

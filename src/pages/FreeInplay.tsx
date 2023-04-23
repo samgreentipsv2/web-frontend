@@ -45,7 +45,7 @@ export const freeloader = async() =>{
    
    
     
-          const getodds= axios.get('http://16.170.170.77:8000/api/freeinplay',  {
+          const getodds= axios.get('http://16.16.166.53/api/freeinplay',  {
           headers: { 'Content-Type': 'application/json',
                       // 'Authorization': `Token ${cookieValue}`
   

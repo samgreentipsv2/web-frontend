@@ -57,7 +57,7 @@ const Login: React.FC = () => {
           password: Password
          };
         try{
-          await axios.post('http://16.170.170.77:8000/api/auth/token/login',user,
+          await axios.post('http://16.16.166.53/api/auth/token/login',user,
             {
                 headers: { 'Content-Type': 'application/json',
                         },
