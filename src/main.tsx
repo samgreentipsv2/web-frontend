@@ -19,6 +19,7 @@ import {
   Route
 } from "react-router-dom";
 import ResetPassword from './pages/ResetPassword';
+import ResetPasswordConfirm from './pages/ResetPasswordConfirm';
 import Navbar from './components/Navbar';
 import Unauthorized from './pages/Unauthorized';
 // import Home from './pages/Home';
@@ -58,6 +59,9 @@ const Router = createBrowserRouter(
         <Route path="register" element={<Register/>}/>
         <Route path="login" element={<Login/>}/>
         <Route path="sg-admin/login" element={<AdminLogin/>}/>
+        <Route path="reset-password" element={<ResetPassword/>}/>
+        <Route  path='/password/reset/confirm/:uid/:token' element={<ResetPasswordConfirm/>} />
+
      </Route>
      <Route path='sg-admin/admin' element={<AdminNavbar/>}>
        <Route path="sg-admin/admin" element={<Admin/>}/> 

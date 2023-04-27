@@ -101,8 +101,7 @@ await axios.post('http://16.16.166.53/api/auth/users/',
   withCredentials: true
   }).then((res)=>{
 //clear state and controlled inputs
-//need value attrib on inputs for this
-console.log(res.data)     
+//need value attrib on inputs for this   
 setSuccess(!success);
 navigate("/login");
 setfirstName('');
@@ -110,6 +109,7 @@ setLastName('');
 setEmail('');
 setPassword('');
 setConfirmPassword('');
+alert("Registered Successfully!")
 
 
     }) 

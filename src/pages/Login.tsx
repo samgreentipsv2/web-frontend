@@ -139,7 +139,7 @@ const Login: React.FC = () => {
         </form>
         
          <span className='btnspn1'><p>Don't Have An Account? <Link to='/register'>Sign Up</Link>  </p>
-         <p>Forgot Password? <Link to='/register'>Request a new one</Link>  </p></span>
+         <p>Forgot Password? <Link to='/reset-password'>Request a new one</Link>  </p></span>
 
          </div>
          <div><img className='regimg' src={Login2Icon} ></img></div>

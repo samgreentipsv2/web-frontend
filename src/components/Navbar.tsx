@@ -31,6 +31,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 import FeedIcon from '@mui/icons-material/Feed';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 
 
 
@@ -278,7 +279,7 @@ if (isAuthenticated()){
   marginRight: '-22px',
   paddingBottom: '20px',
   height:'63px',
-  backgroundColor:"black",
+  backgroundColor:"#C87711",
   position: 'fixed',
   bottom: '0',
   width: '90%',
@@ -289,7 +290,7 @@ if (isAuthenticated()){
 }} onClick={() => navigate('/')} label="Home"  icon={<HomeIcon sx={{ height: '31px', width: '30px'}} htmlColor='#035A04'/> }/>
   <BottomNavigationAction sx={{display: 'flex',
                               flexDirection: 'row', 
-}} onClick={() => navigate('/free-predictions')} label="Tips"  icon={<SavedSearchIcon sx={{ height: '31px',width: '30px'}} htmlColor='#035A04'/> }/>
+}} onClick={() => navigate('/free-predictions')} label="Tips"  icon={<TipsAndUpdatesIcon sx={{ height: '31px',width: '30px'}} htmlColor='#035A04'/> }/>
   <BottomNavigationAction sx={{display: 'flex',
                               flexDirection: 'row', 
 }} onClick={() => navigate('/football-news')}label="News" icon={<FeedIcon sx={{height: '31px', width: '30px'}} htmlColor='#035A04'  />} />
