@@ -61,7 +61,8 @@ const Login: React.FC = () => {
             {
                 headers: { 'Content-Type': 'application/json',
                         },
-                    withCredentials: true
+                    withCredentials: true,
+                    
             }).then((res)=>{
         
             signIn({
@@ -70,7 +71,7 @@ const Login: React.FC = () => {
                 expiresIn: 1000000,
                 tokenType: "Bearer" 
             })
-            console.log(JSON.stringify(res?.data))
+            // console.log(JSON.stringify(res?.data))
             
            
             setSuccess(true);
