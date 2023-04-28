@@ -76,7 +76,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <AuthProvider authType = {'cookie'}
                   authName={'_auth'}
                   cookieDomain={window.location.hostname}
-                  cookieSecure={true}
+                  cookieSecure={window.location.protocol === "https:"}
                   >
        <RouterProvider router={Router} />
        </AuthProvider>
