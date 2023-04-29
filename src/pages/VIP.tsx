@@ -33,14 +33,16 @@ import FAQs from './FAQs';
 
 
   if (isAuthenticated()){
-    const cookieValue = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("_auth="))
-    ?.split("=")[1];
+    // const cookieValue = document.cookie
+    // .split("; ")
+    // .find((row) => row.startsWith("_auth="))
+    // ?.split("=")[1];
+
+    const cookieValue = localStorage.getItem('_auth');
     
 
     useEffect(() => {
-      axios.get('http://16.16.166.53/api/vipcat',  {
+      axios.get(`${import.meta.env.VITE_SERVER_URL}api/vipcat`,  {
         headers: { 'Content-Type': 'application/json',
                     'Authorization': `Token ${cookieValue}`
       
@@ -59,7 +61,7 @@ import FAQs from './FAQs';
 
 
     useEffect(() => {
-       axios.get(`http://16.16.166.53/api/user/${email}`,  {
+       axios.get(`${import.meta.env.VITE_SERVER_URL}api/user/${email}`,  {
         headers: { 'Content-Type': 'application/json'
     
                 },
@@ -80,7 +82,7 @@ import FAQs from './FAQs';
 
     useEffect(() => {
 
-      axios.get('http://16.16.166.53/api/plans',  {
+      axios.get(`${import.meta.env.VITE_SERVER_URL}api/plans`,  {
         headers: { 'Content-Type': 'application/json'
 
                 },

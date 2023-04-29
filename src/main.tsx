@@ -33,7 +33,7 @@ import AdminLogin from './components/AdminLogin';
 import { freeloader } from './pages/FreeInplay';
 import About from './pages/About';
 import Checkout from './pages/Checkout';
-import CookieConsent from 'react-cookie-consent';
+
 import Lottie from 'lottie-react';
 import spinner from './assets/spinner.json'
 import AdminUser from './pages/AdminUser';
@@ -75,8 +75,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
         <AuthProvider authType = {'localstorage'}
                   authName={'_auth'}
-                  cookieDomain={window.location.hostname}
-                  cookieSecure={true}
+                  // cookieDomain={window.location.hostname}
+                  // cookieSecure={true}
                   >
        <RouterProvider router={Router} />
        </AuthProvider>

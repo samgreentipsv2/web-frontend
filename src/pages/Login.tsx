@@ -57,7 +57,7 @@ const Login: React.FC = () => {
           password: Password
          };
         try{
-          await axios.post('http://16.16.166.53/api/auth/token/login',user,
+          await axios.post(`${import.meta.env.VITE_SERVER_URL}api/auth/token/login`,user,
             {
                 headers: { 'Content-Type': 'application/json',
                         },

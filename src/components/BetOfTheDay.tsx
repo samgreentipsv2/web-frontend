@@ -17,34 +17,34 @@ const BetOfTheDay = (props: Props) => {
 
 
   useEffect(() => {
-    axios.get(`http://16.16.166.53/api/botd`,  {
+    axios.get(`${import.meta.env.VITE_SERVER_URL}api/botd`,  {
       headers: { 'Content-Type': 'application/json'
   
               },
           withCredentials: true
   }
     ).then((res)=>{
-      // console.log(res.data.user[0].first_name)
-      setgames(res.data.betofday)
+      // console.log(res.data.betoftheday)
+      setgames(res.data.betoftheday)
       // return (res.data.user)
     })
     
    }, [])
     
 
-    function createData(
-      date: string,
-      game: string,
-      prediction: string  
-      ) {
-        return { date, game,prediction };
-      }
+    // function createData(
+    //   date: string,
+    //   game: string,
+    //   prediction: string  
+    //   ) {
+    //     return { date, game,prediction };
+    //   }
 
 
 
-      const rows = [
-        createData( '7-4-2023', 'Inter vs AC Milan', 'Over 2.5')
-      ];
+    //   const rows = [
+    //     createData( '7-4-2023', 'Inter vs AC Milan', 'Over 2.5')
+    //   ];
       
 
 
@@ -53,7 +53,7 @@ const BetOfTheDay = (props: Props) => {
   return (
       <>
       <div className='betofday'>
-     <span><h5> BET OF THE DAY</h5></span>
+     <span><h5 className='home-sub'> BET OF THE DAY</h5></span>
 
 
      <TableContainer component={Paper}>
@@ -63,19 +63,21 @@ const BetOfTheDay = (props: Props) => {
             <TableCell>Date</TableCell>
             <TableCell align="right">Game</TableCell>
             <TableCell align="right">Prediction</TableCell>
+            <TableCell align="right">Odd</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {games?.map((row:any) => (
             <TableRow
-              key={row.game}
+              key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.date}
+                <p>{row.time}</p>
               </TableCell>
-              <TableCell align="right">{row.game}</TableCell>
-              <TableCell align="right">{row.prediction}</TableCell>
+              <TableCell align="right">{row.match}</TableCell>
+              <TableCell align="right">{row.category__category_name}</TableCell>
+              <TableCell align="right">{row.odd}</TableCell>
             </TableRow>
           ))}
         </TableBody>

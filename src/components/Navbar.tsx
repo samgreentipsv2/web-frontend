@@ -66,7 +66,7 @@ useEffect(() => {
 if (isAuthenticated()){
    
    
-    axios.get(`http://16.16.166.53/api/user/${email}`,  {
+    axios.get(`${import.meta.env.VITE_SERVER_URL}api/user/${email}`,  {
       headers: { 'Content-Type': 'application/json'
   
               },
@@ -254,10 +254,10 @@ if (isAuthenticated()){
 
   <div className='footer'>
       <span className='footertxt'>
-      <span><p>About Us</p><p>Contact Us</p></span>
-      <span><p>Privacy Policy</p><p>Terms Of Use</p></span>
-      <span><p>Predictions</p><p>Today's Predictions</p></span>
-      <span><p>Free Predictions</p><p>Betting Tips</p></span>
+      <span><p ><a href='/about'>About Us</a></p> <p><a href='/contact'>Contact Us</a></p></span>
+      <span><p><a href='/privacy-policy'>Privacy Policy</a></p><p>Terms Of Use</p></span>
+      <span><p><a href='free-predictions'>Predictions</a></p><p>Today's Predictions</p></span>
+      <span><p>Free Predictions</p><p><a href='faqs'>Betting Tips</a></p></span>
       </span>
       <span className='social-icons'>
         <a target='_blank' href='https://m.facebook.com/samgreentip'><FacebookIcon sx={{height: "44px", width: "44px", color: "white", margin: "18px"}}/></a>

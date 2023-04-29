@@ -14,6 +14,7 @@ import Whatsapp from '../assets/Whatsapp.svg';
 const Contact = () => {
   const [email, setemail] = useState<string>("");
   const [message, setmessage] = useState<string>("");
+  const navigate = useNavigate();
 
 
   const emailRef = useRef<HTMLInputElement | null>(null);
@@ -24,7 +25,9 @@ const Contact = () => {
 }, [])
 
   const onSubmit = () =>{
-    
+    alert("message sent successfully!")
+    navigate("/")
+
   }
   return (
     <>

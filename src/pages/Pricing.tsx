@@ -52,7 +52,7 @@ export const planLoader = async() =>{
  
  
   
-        const getPlans= axios.get('http://16.16.166.53/api/plans',  {
+        const getPlans= axios.get(`${import.meta.env.VITE_SERVER_URL}api/plans`,  {
         headers: { 'Content-Type': 'application/json'
 
                 },

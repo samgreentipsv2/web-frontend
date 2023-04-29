@@ -23,26 +23,28 @@ const Checkout = () => {
 
   const user = auth()?.email
 
-   const cookieValue = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("_auth="))
-    ?.split("=")[1];
+  //  const cookieValue = document.cookie
+  //   .split("; ")
+  //   .find((row) => row.startsWith("_auth="))
+  //   ?.split("=")[1];
+
+  const cookieValue = localStorage.getItem('_auth');
 
   useEffect(() => {
 
    
-    axios.get(`http://16.16.166.53/api/plan/${searchParams.get('plan')}`,  {
+    axios.get(`${import.meta.env.VITE_SERVER_URL}api/plan/${searchParams.get('plan')}`,  {
       headers: { 'Content-Type': 'application/json'
   
               },
           withCredentials: true
   }
     ).then((res)=>{
-      console.log(res.data)
+      // console.log(res.data)
       setamount(res.data.plan[0]?.price)
       setplan(res.data.plan[0]?.name)
       setduration(res.data.plan[0]?.duration)
-      console.log(publicKey)
+      // console.log(publicKey)
 
     })
   
@@ -60,7 +62,7 @@ const Checkout = () => {
 
 
   const onSuccess = () => {
-   axios.post('http://16.16.166.53/api/addvip',
+   axios.post(`${import.meta.env.VITE_SERVER_URL}api/addvip`,
   JSON.stringify({
  
     email: user,

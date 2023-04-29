@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       <FreeInplay/>
       <BetOfTheDay/>
 
-      <CookieConsent
+      {/* <CookieConsent
   location="bottom"
   buttonText="Accept"
   cookieName="myAwesomeCookieName2"
@@ -29,8 +29,7 @@ const Home: React.FC = () => {
   expires={150}
 >
   This website uses cookies to enhance the user experience.{" "}
-  <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>
-</CookieConsent>
+</CookieConsent> */}
 
 
 

@@ -32,12 +32,15 @@ const SingVip = ({category_name}: catProps) => {
 
     useEffect(() => {
 
-      const cookieValue = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("_auth="))
-      ?.split("=")[1];
+      // const cookieValue  = document.cookie
+      // .split("; ")
+      // .find((row) => row.startsWith("_auth="))
+      // ?.split("=")[1];
 
-      axios.get(`http://16.16.166.53/api/vipodd/${category}`,  {
+
+      const cookieValue = localStorage.getItem('_auth');
+
+      axios.get(`${import.meta.env.VITE_SERVER_URL}api/vipodd/${category}`,  {
         headers: { 'Content-Type': 'application/json',
                     'Authorization': `Token ${cookieValue}`
 

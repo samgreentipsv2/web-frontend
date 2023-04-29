@@ -15,7 +15,7 @@ const ResetPassword = (props: Props) => {
   const sendReset = (event:any) =>{
     event.preventDefault()
 
-    axios.post("http://16.16.166.53/api/auth/users/reset_password/",
+    axios.post(`${import.meta.env.VITE_SERVER_URL}api/auth/users/reset_password/`,
     JSON.stringify({
       email: email
     }), {headers: { 'Content-Type': 'application/json',

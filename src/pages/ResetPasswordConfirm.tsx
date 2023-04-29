@@ -13,7 +13,7 @@ const ResetPasswordConfirm = (props: Props) => {
 
 
   const ResetConf = () =>{
-    axios.post(`http://16.16.166.53/api/plan/${searchParams.get('plan')}`,  {
+    axios.post(`${import.meta.env.VITE_SERVER_URL}api/plan/${searchParams.get('plan')}`,  {
       headers: { 'Content-Type': 'application/json'
   
               },
