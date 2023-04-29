@@ -16,17 +16,17 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Logo from '../assets/samglogo.svg';
-import Avatar from '../assets/Avatar.svg';
+import Avatar from '../assets/Avatar.png';
 import '../styles/index.scss';
 import { Outlet, Link, useLoaderData, useNavigate, redirect } from 'react-router-dom';
 import {useAuthUser, useIsAuthenticated, useSignOut} from 'react-auth-kit';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Facebook from '../assets/Facebook.svg';
-import Telegram from '../assets/Telegram.svg';
-import Whatsapp from '../assets/Whatsapp.svg';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
-import {  EmojiEmotions, Stream, RoomPreferences } from '@mui/icons-material';
+import {  EmojiEmotions, Stream, RoomPreferences, Telegram } from '@mui/icons-material';
 import HomeIcon from '@mui/icons-material/Home';
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 import FeedIcon from '@mui/icons-material/Feed';
@@ -260,9 +260,9 @@ if (isAuthenticated()){
       <span><p>Free Predictions</p><p>Betting Tips</p></span>
       </span>
       <span className='social-icons'>
-        <a target='_blank' href='https://m.facebook.com/samgreentip'><img src={Facebook}/></a>
-       <a target='_blank' href='https://t.me/+Oni7J8ZYh3g1MzFk'><img src={Telegram}/></a>
-       <a target='_blank' href='https://wa.me/2347049976525'><img src={Whatsapp}/></a>
+        <a target='_blank' href='https://m.facebook.com/samgreentip'><FacebookIcon sx={{height: "44px", width: "44px", color: "white", margin: "18px"}}/></a>
+       <a target='_blank' href='https://t.me/+Oni7J8ZYh3g1MzFk'><TelegramIcon sx={{height: "44px", width: "44px", color: "white", margin: "18px"}}/></a>
+       <a target='_blank' href='https://wa.me/2347049976525'><WhatsAppIcon sx={{height: "44px", width: "44px", color: "white", margin: "18px"}}/></a>
       </span>
       <span className='copyright'><p>Copyright 2023 | SamGreen Tips</p></span>
   </div>
