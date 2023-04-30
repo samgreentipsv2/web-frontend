@@ -13,7 +13,7 @@ export const planLoader = async(event:any) =>{
  
  
   try{
-      axios.get('http://127.0.0.1:8000/api/plans',  {
+      axios.get(`${import.meta.env.VITE_SERVER_URL}api/plans`,  {
         headers: { 'Content-Type': 'application/json',
                     'Authorization': `${authHeader()}`
 

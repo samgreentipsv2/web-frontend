@@ -41,8 +41,8 @@ import AdminGames from './pages/AdminGames';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
-    <Route >
-     <Route path='/' element={<Navbar/>}>
+    <Route errorElement={<ErrorPage/>} >
+     <Route path='/' element={<Navbar/>} errorElement={<ErrorPage/>}>
        <Route index element={<React.Suspense fallback= {<Lottie  animationData={spinner}/>}><LazyHome/> </React.Suspense>} loader={freeloader}/>
        <Route path='whytrustus' element={<WhyTrustUs/>}/>
        <Route path='contact' element={<Contact/>}/>
