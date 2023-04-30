@@ -42,16 +42,16 @@ export const  userloader =  ()=>{
 
     try{
   
-    const email = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("email="))
-    ?.split("=")[1];
+    // const email = document.cookie
+    // .split("; ")
+    // .find((row) => row.startsWith("email="))
+    // ?.split("=")[1];
   
-   
+   const email = localStorage.getItem('_auth_state.email')
   
   
   
-   const getUser=  axios.get(`http://127.0.0.1:8000/api/user/${email}`,  {
+   const getUser=  axios.get(`${import.meta.env.VITE_SERVER_URL}api/user/${email}`,  {
       headers: { 'Content-Type': 'application/json'
   
               },
