@@ -7,6 +7,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
+import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+
+
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 interface Props{
 
@@ -24,7 +29,7 @@ const BetOfTheDay = (props: Props) => {
           withCredentials: true
   }
     ).then((res)=>{
-      // console.log(res.data.betoftheday)
+      console.log(res.data.betoftheday)
       setgames(res.data.betoftheday)
       // return (res.data.user)
     })
@@ -73,7 +78,7 @@ const BetOfTheDay = (props: Props) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                <p>{row.time}</p>
+                <p>{new Date(row.time).toString()}</p>
               </TableCell>
               <TableCell align="right">{row.match}</TableCell>
               <TableCell align="right">{row.category__category_name}</TableCell>
@@ -84,6 +89,16 @@ const BetOfTheDay = (props: Props) => {
       </Table>
     </TableContainer>
 
+     </div>
+
+
+     <div>
+     <span><h5 className='home-sub'>RECENT VIP RESULTS</h5></span> 
+       <span>
+         <IndeterminateCheckBoxIcon/>
+         <CheckBoxIcon/>
+   
+</span>
      </div>
      </>
   )

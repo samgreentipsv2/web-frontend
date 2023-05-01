@@ -1,11 +1,14 @@
 import axios from 'axios'
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Hero from '../components/Hero';
 import FreeInplay from './FreeInplay';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BetOfTheDay from '../components/BetOfTheDay';
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import { Scrollbar } from "smooth-scrollbar-react";
+import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
+import TipsCategories from '../components/TipsCategories';
 
 
 
@@ -14,23 +17,27 @@ const Home: React.FC = () => {
     AOS.init({duration: 800});
   }, [])
 
+  const scrollbar = useRef<BaseScrollbar | null>(null);
+
+  useEffect(() => {
+    console.log(scrollbar.current);
+    
+  }, []);
+
+
   return (
     <div data-aos="fade-up">
+
+ <Scrollbar
+        className="custom-class"
+        onScroll={console.log}
+        alwaysShowTracks
+      >
       <Hero/>
       <FreeInplay/>
       <BetOfTheDay/>
-
-      {/* <CookieConsent
-  location="bottom"
-  buttonText="Accept"
-  cookieName="myAwesomeCookieName2"
-  style={{ background: "#2B373B" }}
-  buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-  expires={150}
->
-  This website uses cookies to enhance the user experience.{" "}
-</CookieConsent> */}
-
+      <TipsCategories/>
+  </Scrollbar>
 
 
     </div>

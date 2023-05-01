@@ -12,7 +12,7 @@ const FreeInplay = () => {
   return (
     <>
     <div className='freeinbox'>
-    <span><h5>FREE INPLAY TIPS</h5></span>  
+    <span><h5 className='home-sub'>FREE INPLAY TIPS</h5></span> 
     
     <ul
       ref={scrollRef}
@@ -23,7 +23,7 @@ const FreeInplay = () => {
       }}
     >
    { odds?
-    odds.map((free: FreeProps) => { return <li key={free.id}><SingleFree time={free.time} match={free.match} prediction={free.prediction} id={0}/></li> }):
+    odds.map((free: FreeProps) => { return <li key={free.id}><SingleFree time={new Date(free.time)} match={free.match} prediction={free.prediction} id={0}/></li> }):
       <h1>Match Unavailable</h1>
     }
     </ul>

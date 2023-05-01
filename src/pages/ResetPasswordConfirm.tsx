@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
@@ -11,10 +12,19 @@ const ResetPasswordConfirm = (props: Props) => {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const uid = searchParams.get('uid');
+  const token = searchParams.get('token');
 
-  const ResetConf = () =>{
-    axios.post(`${import.meta.env.VITE_SERVER_URL}api/plan/${searchParams.get('plan')}`,  {
-      headers: { 'Content-Type': 'application/json'
+  const ResetConf = (): void =>{
+    axios.post(`${import.meta.env.VITE_SERVER_URL}api/auth/password/reset/confirm/${uid}/${token}`,  
+      JSON.stringify({
+        uid: uid,
+        token: token,
+        password: password,
+        confirmpassword: confirmpassword
+
+      }),
+      {headers: { 'Content-Type': 'application/json'
   
               },
           withCredentials: true
@@ -26,7 +36,7 @@ const ResetPasswordConfirm = (props: Props) => {
   return (
 <>
 
-<form onSubmit={ResetConf}>
+<form >
     <label htmlFor="password">
     New Password:
   </label>
@@ -56,7 +66,7 @@ const ResetPasswordConfirm = (props: Props) => {
     value={confirmpassword}
     onChange={(e)=> {setconfirmpassword(e.target.value)}} />
 
-    <button className='btn1'> Reset Password</button>
+    <button onClick={ResetConf} className='btn1'> Reset Password</button>
 
 
 </form>

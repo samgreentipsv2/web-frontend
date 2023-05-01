@@ -13,10 +13,10 @@ const Hero: React.FC = () => {
     <div className='hersctn'>
         <div>
             <div className='herotxt'>
-            <h1 className='herotxt1'>WIN BIG!!</h1>
-            <h1 className='herotxt2'>WITH OUR EXPERT</h1>
-            <h1 className='herotxt1'>BETTING TIPS.</h1>
-            <span className='blnkspn'><p>200+ Tips</p> <Lottie className='blinkcls' animationData={Blinking}/></span>
+            <h1 className='herotxt1'>THE WORLD'S</h1>
+            <h1 className='herotxt2'>MOST OUTSTANDING</h1>
+            <h1 className='herotxt1'>TIPSTER</h1>
+            <span className='blnkspn'><p>Over 200+ Tips</p> <Lottie className='blinkcls' animationData={Blinking}/></span>
             </div>
             <span className='herbtnspn'>
               <a href='/vip'> <button className='herbtn'><span><img src={herbtnimg}></img></span> JOIN VIP</button></a>

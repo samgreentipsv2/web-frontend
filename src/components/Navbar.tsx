@@ -32,6 +32,8 @@ import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 import FeedIcon from '@mui/icons-material/Feed';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
+import {Scrollbar} from 'smooth-scrollbar-react';
 
 
 
@@ -60,6 +62,14 @@ const [value, setValue] = React.useState(0);
 
   const email = auth()?.email
 const [firstName, setfirstName] = useState<string>("");
+
+const scrollbar = React.useRef<BaseScrollbar | null>(null);
+
+  useEffect(() => {
+    console.log(scrollbar.current);
+    
+  }, []);
+
 
       
 useEffect(() => {
@@ -250,7 +260,14 @@ if (isAuthenticated()){
       >
         <Toolbar />
 
-        <div><Outlet/></div>
+        <div> <Scrollbar
+        className="custom-class"
+        onScroll={console.log}
+        alwaysShowTracks
+      >
+        <Outlet/>
+        
+        </Scrollbar></div>
 
   <div className='footer'>
       <span className='footertxt'>

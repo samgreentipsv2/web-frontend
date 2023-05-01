@@ -36,6 +36,7 @@ main{
     overflow-x: hidden;
     height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
 
 
 }
@@ -518,11 +519,12 @@ transition: all .4s ease-in-out;
 
 .blinkcls{
     height: 34px;
+    margin-left: -12px;
 }
 
 .blnkspn{
     display: flex;
-    padding: 18px 0px;
+    padding: 17px 0px;
 
     p{
         font-size: 35px;
@@ -533,6 +535,7 @@ transition: all .4s ease-in-out;
 
 .betofday{
     margin-top: 60px;
+    margin-bottom: 30px;
     
 }
 
@@ -596,12 +599,33 @@ span.MuiBottomNavigationAction-label{
 
 
 .home-sub{
+    font-size: 21px;
     height: 33px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 
+.tipcatbox{
+    height: 120px;
+    width: 120px;
+    background-color: $base-color;
+    border-radius: 32px;
+    margin: 13px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 22px;
 
+    h2{
+        font-size: 17px;
+        color: whitesmoke;
+    }
+}
+
+.freebox{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
@@ -746,6 +770,27 @@ span.MuiBottomNavigationAction-label{
 
     .h3vip{
         color: black;
+    }
+
+    .tipcatbox{
+        height: 120px;
+        width: 150px;
+        background-color: $base-color;
+        border-radius: 32px;
+        margin: 13px;
+        padding: 40px;
+    
+        h2{
+            font-size: 17px;
+            color: whitesmoke;
+        }
+    
+    }
+    
+    
+    .freebox{
+        display: flex;
+        flex-wrap: wrap;
     }
     
     

@@ -49,7 +49,7 @@ const FreePredictions = (props: Props) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                <p>{row.time}</p>
+                  {new Date(row.time).toString()}
               </TableCell>
               <TableCell align="right">{row.match}</TableCell>
               <TableCell align="right">{row.category__category_name}</TableCell>
