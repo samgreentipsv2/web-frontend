@@ -78,7 +78,7 @@ const BetOfTheDay = (props: Props) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                <p>{new Date(row.time).toString()}</p>
+                <p>{new Date(row.time).toDateString()}</p>
               </TableCell>
               <TableCell align="right">{row.match}</TableCell>
               <TableCell align="right">{row.category__category_name}</TableCell>
@@ -92,14 +92,7 @@ const BetOfTheDay = (props: Props) => {
      </div>
 
 
-     <div>
-     <span><h5 className='home-sub'>RECENT VIP RESULTS</h5></span> 
-       <span>
-         <IndeterminateCheckBoxIcon/>
-         <CheckBoxIcon/>
-   
-</span>
-     </div>
+     
      </>
   )
 }

@@ -15,7 +15,9 @@ const SingFreeCat = (props: Props) => {
     }
   return (
  
-          <><a href='/free-predictions'><div className='tipcatbox'>
+          <>
+          <a href='/free-predictions'><div className='tipcatbox'>
+              <span><strong><p>FREE!</p></strong></span>
       <h2 >{props.name}</h2>
      
       </div>

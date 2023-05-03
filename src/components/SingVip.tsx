@@ -93,7 +93,7 @@ const SingVip = ({category_name}: catProps) => {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Please Gamble Responsibly"}
+          {"SAMGREENTIPS VIP TICKET"}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
@@ -102,10 +102,10 @@ const SingVip = ({category_name}: catProps) => {
       <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
-            <TableCell align="right">Game</TableCell>
-            <TableCell align="right">Prediction</TableCell>
-            <TableCell align="right">Odd</TableCell>
+            {/* <TableCell>Date</TableCell> */}
+            <TableCell align="left">Game</TableCell>
+            <TableCell align="left">Prediction</TableCell>
+            <TableCell align="left">Odd</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -114,24 +114,24 @@ const SingVip = ({category_name}: catProps) => {
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              {/* <TableCell component="th" scope="row">
                 <p>{row.time}</p>
-              </TableCell>
-              <TableCell align="right">{row.match}</TableCell>
-              <TableCell align="right">{row.Prediction}</TableCell>
-              <TableCell align="right">{row.odd}</TableCell>
+              </TableCell> */}
+              <TableCell align="left">{row.match}</TableCell>
+              <TableCell align="left">{row.Prediction}</TableCell>
+              <TableCell align="left">{row.odd}</TableCell>
             </TableRow>
           ))}
 
         <>
        
-        <span className='vipodds'><p><strong>Total Odds</strong>: {vipodds}</p></span>
+        {/* <span className='vipodds'><p><strong>Total Odds</strong>: {vipodds}</p></span> */}
         <span className='vipodds'><p><strong>BetKing</strong> : {betking}</p></span>
-        <span className='vipodds'><p><strong>1xbet</strong> :{onexbet}</p></span>
-        <span className='vipodds'><p><strong>22bet</strong> :{twentytwobet}</p></span>
-        <span className='vipodds'><p><strong>Sportybet</strong> : {sportybet}</p></span>
-        <span className='vipodds'><p><strong>Bet9ja</strong> :{bet9ja}</p></span>
         <span className='vipodds'><p><strong>Helabet</strong> :{helabet}</p></span>
+        <span className='vipodds'><p><strong>1xbet</strong> :{onexbet}</p></span>
+        <span className='vipodds'><p><strong>Sportybet</strong> : {sportybet}</p></span>
+        <span className='vipodds'><p><strong>22bet</strong> :{twentytwobet}</p></span>
+        <span className='vipodds'><p><strong>Bet9ja</strong> :{bet9ja}</p></span>
         <span className='vipodds'><p><strong>Date </strong>: {date}</p></span>
         
         </>

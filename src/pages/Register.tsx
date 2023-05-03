@@ -103,13 +103,14 @@ await axios.post(`${import.meta.env.VITE_SERVER_URL}api/auth/users/`,
 //clear state and controlled inputs
 //need value attrib on inputs for this   
 setSuccess(!success);
+alert("Registered Successfully!")
 navigate("/login");
 setfirstName('');
 setLastName('');
 setEmail('');
 setPassword('');
 setConfirmPassword('');
-alert("Registered Successfully!")
+
 
 
     }) 

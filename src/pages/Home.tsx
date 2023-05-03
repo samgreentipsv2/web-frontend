@@ -9,6 +9,8 @@ import CookieConsent, { Cookies } from "react-cookie-consent";
 import { Scrollbar } from "smooth-scrollbar-react";
 import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
 import TipsCategories from '../components/TipsCategories';
+import NewsBanner from '../components/NewsBanner';
+import RecentVip from '../components/RecentVip';
 
 
 
@@ -36,7 +38,9 @@ const Home: React.FC = () => {
       <Hero/>
       <FreeInplay/>
       <BetOfTheDay/>
+      <RecentVip/>
       <TipsCategories/>
+      <NewsBanner/>
   </Scrollbar>
 
 

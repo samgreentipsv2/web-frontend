@@ -65,7 +65,8 @@ a{
 
 input{
   font-family:'Roboto';
-  height: 40px;
+  font-size: 30px;
+  height: 50px;
   padding-left: 0.85rem;
   border-radius: 4px;
   border: none;
@@ -607,24 +608,78 @@ span.MuiBottomNavigationAction-label{
 
 
 .tipcatbox{
-    height: 120px;
-    width: 120px;
+    height: 90px;
+    width: 150px;
     background-color: $base-color;
-    border-radius: 32px;
-    margin: 13px;
-    padding-top: 40px;
-    padding-left: 20px;
-    padding-right: 22px;
+    border-radius: 22px;
+    padding-top: 22px;
+    padding-left: 27px;
+   
 
     h2{
-        font-size: 17px;
+        font-size: 15px;
         color: whitesmoke;
+
+    }
+
+    span{
+        color: $base-back;
+
+    }
+
+    p{
+        color: $base-color2;
+        margin-bottom: 14px;
+        margin-top: -10px;
+        background-color: $base-back;
+        border-radius: 23px;
+        padding: 2.4px;
     }
 }
 
 .freebox{
     display: flex;
     flex-wrap: wrap;
+    gap: 33px;
+}
+
+
+
+.newsbanner{
+    margin-top: 30px;
+    height: 250px;
+    width: px;
+    display: flex;
+    background-color: $base-color2;
+    justify-content: center;
+    background-image: url("../assets/promopic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode:screen;
+    
+    button{
+        margin-top: 100px;
+    }
+
+}
+
+
+.recvip{
+    display: flex;
+    gap: 7px;
+
+
+    li{
+        margin: 0px 2px;
+        background-color: $base-color2;
+        border-radius: 18px;
+        height: 85px;
+        width: 85px;
+        padding: 7px;
+        border-style: dotted;
+        border-width: 6px;
+        border-color: $base-color;
+    }
 }
 
 
@@ -778,7 +833,8 @@ span.MuiBottomNavigationAction-label{
         background-color: $base-color;
         border-radius: 32px;
         margin: 13px;
-        padding: 40px;
+        padding-left: 40px;
+        padding-right: 8px;
     
         h2{
             font-size: 17px;

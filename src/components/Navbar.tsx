@@ -128,17 +128,12 @@ if (isAuthenticated()){
           </ListItem>
           <ListItem  disablePadding>
           
-            <Link className='navli' to="vip"> <ListItemText primary="VIP Ticket"/></Link>
+            <Link className='navli' to="vip"> <ListItemText primary="View VIP Ticket"/></Link>
             
           </ListItem>
   
 
 
-          <ListItem  disablePadding>
-          
-            <Link className='navli' to="football-news">  <ListItemText primary="Football News" /></Link>
-            
-          </ListItem>
           <ListItem  disablePadding>
           
           <Link className='navli' to="about"> <ListItemText primary="About"/></Link>
@@ -156,7 +151,7 @@ if (isAuthenticated()){
           </ListItem>
           <ListItem  disablePadding>
         
-            <Link className='navli' to="pricing"> <ListItemText primary="Pricing" /></Link>
+            <Link className='navli' to="pricing"> <ListItemText primary="Join VIP" /></Link>
             
           </ListItem>
           {!isAuthenticated()?
@@ -308,9 +303,9 @@ if (isAuthenticated()){
   <BottomNavigationAction sx={{display: 'flex',
                               flexDirection: 'row', 
 }} onClick={() => navigate('/free-predictions')} label="Tips"  icon={<TipsAndUpdatesIcon sx={{ height: '31px',width: '30px'}} htmlColor='#035A04'/> }/>
-  <BottomNavigationAction sx={{display: 'flex',
+  <a target='_blank' href='https://punditville.com'> <BottomNavigationAction sx={{display: 'flex',
                               flexDirection: 'row', 
-}} onClick={() => navigate('/football-news')}label="News" icon={<FeedIcon sx={{height: '31px', width: '30px'}} htmlColor='#035A04'  />} />
+}} label="News" icon={<FeedIcon sx={{height: '31px', width: '30px'}} htmlColor='#035A04'  />} /></a>
   <BottomNavigationAction sx={{display: 'flex',
                               flexDirection: 'row', 
 }} onClick={() => navigate('/vip')}label="VIP" icon={<AccountCircleIcon sx={{height: '31px', width: '30px'}} htmlColor='#035A04'  />} />
