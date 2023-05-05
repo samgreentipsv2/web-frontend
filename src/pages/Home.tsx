@@ -30,18 +30,14 @@ const Home: React.FC = () => {
   return (
     <div data-aos="fade-up">
 
- <Scrollbar
-        className="custom-class"
-        onScroll={console.log}
-        alwaysShowTracks
-      >
+
       <Hero/>
       <FreeInplay/>
       <BetOfTheDay/>
       <RecentVip/>
       <TipsCategories/>
       <NewsBanner/>
-  </Scrollbar>
+ 
 
 
     </div>
