@@ -66,9 +66,9 @@ const BetOfTheDay = (props: Props) => {
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
-            <TableCell align="right">Game</TableCell>
-            <TableCell align="right">Prediction</TableCell>
-            <TableCell align="right">Odd</TableCell>
+            <TableCell align="left">Match</TableCell>
+            <TableCell align="left">Prediction</TableCell>
+            <TableCell align="left">Odd</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -80,9 +80,9 @@ const BetOfTheDay = (props: Props) => {
               <TableCell component="th" scope="row">
                 <p>{new Date(row.time).toDateString()}</p>
               </TableCell>
-              <TableCell align="right">{row.match}</TableCell>
-              <TableCell align="right">{row.category__category_name}</TableCell>
-              <TableCell align="right">{row.odd}</TableCell>
+              <TableCell align="left">{row.match}</TableCell>
+              <TableCell align="left">{row.category__category_name}</TableCell>
+              <TableCell align="left">{row.odd}</TableCell>
             </TableRow>
           ))}
         </TableBody>

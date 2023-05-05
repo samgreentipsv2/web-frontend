@@ -34,6 +34,9 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
 import {Scrollbar} from 'smooth-scrollbar-react';
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import { useSnapCarousel } from 'react-snap-carousel';
+
 
 
 
@@ -65,10 +68,15 @@ const [firstName, setfirstName] = useState<string>("");
 
 const scrollbar = React.useRef<BaseScrollbar | null>(null);
 
+const { scrollRef } = useSnapCarousel();
+
   useEffect(() => {
     console.log(scrollbar.current);
     
   }, []);
+
+
+
 
 
       
@@ -255,14 +263,15 @@ if (isAuthenticated()){
       >
         <Toolbar />
 
-        <div> <Scrollbar
-        className="custom-class"
-        onScroll={console.log}
-        alwaysShowTracks
-      >
-        <Outlet/>
-        
-        </Scrollbar></div>
+      
+
+          <div  ref={scrollRef}
+        style={{
+          overflow: 'scroll',
+          scrollSnapType: 'y mandatory'}}>
+        <Outlet />
+        </div>
+  
 
   <div className='footer'>
       <span className='footertxt'>

@@ -19,7 +19,7 @@ const TipsCategories = (props: Props) => {
             }
               ).then((res) =>{
                 setcategories(res.data.categories)
-                console.log(res.data.categories)
+                // console.log(res.data.categories)
               })
       }, [])
 

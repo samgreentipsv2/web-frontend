@@ -11,10 +11,10 @@ export interface RecentProps {
 const SingResult = (props: RecentProps) => {
   return (
     <>
-    <strong><p>{new Date(props.day).toDateString()}</p></strong>
+    <strong><p>{new Date(props.day).toDateString().slice(3,10)}</p></strong>
     <span>
         {
-            props.status? <CheckBoxIcon sx={{color:"green", fontSize:"50px"}}/>: <IndeterminateCheckBoxIcon sx={{color:"red", fontSize:"50px"}}/>
+            props.status? <CheckBoxIcon sx={{color:"green", fontSize:"30px"}}/>: <IndeterminateCheckBoxIcon sx={{color:"red", fontSize:"30px"}}/>
             
         }
     </span>

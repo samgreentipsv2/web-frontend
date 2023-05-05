@@ -13,7 +13,7 @@ export interface FreeProps{
 export const SingleFree= ( {time, match,prediction}:FreeProps) => {
   return (
     <div className='freeinsing'>
-    <p><strong>{time.toLocaleTimeString()} </strong></p>
+    <p><strong>{time.toLocaleTimeString().slice(0,5)} </strong></p>
      <p> {match}</p>
      <p className='odddd' > <strong>{prediction}</strong></p>
      <img className='freefield' src={field}></img>

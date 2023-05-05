@@ -43,16 +43,13 @@ const RecentVip = (props: Props) => {
       <h1>Match Unavailable</h1>
     }
     </ul>
-
-
-
-
-
-
-        
-  
 </span>
-    </div></div>
+    </div>
+    <span className='iframe'>
+   <a href='/vip' ><button className='btn1'>Join VIP</button></a>
+   </span>
+    
+    </div>
   )
 }
 

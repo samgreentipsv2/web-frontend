@@ -92,7 +92,7 @@ const SingVip = ({category_name}: catProps) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle sx={{color: "white", backgroundColor:"black"}} id="alert-dialog-title">
           {"SAMGREENTIPS VIP TICKET"}
         </DialogTitle>
         <DialogContent>
@@ -103,7 +103,7 @@ const SingVip = ({category_name}: catProps) => {
         <TableHead>
           <TableRow>
             {/* <TableCell>Date</TableCell> */}
-            <TableCell align="left">Game</TableCell>
+            <TableCell align="left">Match</TableCell>
             <TableCell align="left">Prediction</TableCell>
             <TableCell align="left">Odd</TableCell>
           </TableRow>

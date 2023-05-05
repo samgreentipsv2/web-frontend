@@ -20,6 +20,7 @@ const FreeInplay = () => {
         display: 'flex',
         overflow: 'scroll',
         scrollSnapType: 'x mandatory'
+        
       }}
     >
    { odds?
