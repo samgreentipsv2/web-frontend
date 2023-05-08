@@ -261,22 +261,16 @@ if (isAuthenticated()){
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar />
+        <Toolbar />      
 
-      
-
-          <div  ref={scrollRef}
-        style={{
-          overflow: 'scroll',
-          scrollSnapType: 'y mandatory'}}>
         <Outlet />
-        </div>
+    
   
 
   <div className='footer'>
       <span className='footertxt'>
       <span><p ><a href='/about'>About Us</a></p> <p><a href='/contact'>Contact Us</a></p></span>
-      <span><p><a href='/privacy-policy'>Privacy Policy</a></p><p>Terms Of Use</p></span>
+      <span><p><a href='/privacy-policy'>Privacy Policy</a></p><p><a href='/termsofuse'>Terms Of Use</a></p></span>
       <span><p><a href='free-predictions'>Predictions</a></p><p>Today's Predictions</p></span>
       <span><p>Free Predictions</p><p><a href='faqs'>Betting Tips</a></p></span>
       </span>

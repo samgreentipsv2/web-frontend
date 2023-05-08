@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import FreePredictions from './pages/FreePredictions';
 import VIP from './pages/VIP';
+import scrollToTop from './components/scrollToTop';
 import {Pricing, planLoader} from './pages/Pricing';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Register from './pages/Register';
@@ -38,13 +39,19 @@ import Lottie from 'lottie-react';
 import spinner from './assets/spinner.json'
 import AdminUser from './pages/AdminUser';
 import AdminGames from './pages/AdminGames';
+import TermsOfUse from './pages/TermsOfUse';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
+    
+    
     <Route errorElement={<ErrorPage/>} >
+
      <Route path='/' element={<Navbar/>} errorElement={<ErrorPage/>}>
+
        <Route index element={<React.Suspense fallback= {<Lottie  animationData={spinner}/>}><LazyHome/> </React.Suspense>} loader={freeloader}/>
        <Route path='whytrustus' element={<WhyTrustUs/>}/>
+       <Route path='termsofuse' element={<TermsOfUse/>}/>
        <Route path='contact' element={<Contact/>}/>
        <Route path='free-predictions' element={<FreePredictions/>}/>
        <Route path='pricing' element={<Pricing />} loader={planLoader}/>
@@ -79,6 +86,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                   // cookieSecure={true}
                   >
        <RouterProvider router={Router} />
+     
+
        </AuthProvider>
   </React.StrictMode>,
 )

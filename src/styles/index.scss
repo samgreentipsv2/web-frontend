@@ -648,9 +648,10 @@ span.MuiBottomNavigationAction-label{
 }
 
 .freebox{
+    margin: 0px -2px;
     display: flex;
     flex-wrap: wrap;
-    gap: 33px;
+    gap: 13px;
     justify-content: space-around;
 }
 
@@ -684,12 +685,12 @@ span.MuiBottomNavigationAction-label{
 
 
     li{
-        margin: 0px 2px;
+        margin: 0px 3px;
         color: white;
         border-radius: 18px;
         height: px;
-        width: 85px;
-        padding: 7px;
+        width: 55px;
+        padding: 5px;
        
         border-width: 6px;
     
@@ -712,7 +713,7 @@ span.MuiBottomNavigationAction-label{
 //////
 ///// media queries for bigger screens
 
-@media  only screen and (min-width:750px){
+@media  only screen and (min-width:650px){
 
     body{
         margin: 15px;
@@ -722,6 +723,7 @@ span.MuiBottomNavigationAction-label{
     main{
         margin-right: -14.6px ;
         margin-left: -12.8px;
+        width: 100%
     }
 
     .errimg{

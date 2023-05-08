@@ -4,7 +4,15 @@ type Props = {}
 
 const PrivacyPolicy = (props: Props) => {
   return (
-    <div>PrivacyPolicy</div>
+    <>
+     <span className=' faq viphdtxt'>
+    <h1>Privacy Policy</h1>
+    </span>
+
+    <p>
+
+    </p>
+    </>
   )
 }
 

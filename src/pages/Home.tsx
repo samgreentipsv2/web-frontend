@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       <BetOfTheDay/>
       <RecentVip/>
       <TipsCategories/>
-      <NewsBanner/>
+      
  
 
 

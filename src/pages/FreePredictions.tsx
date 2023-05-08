@@ -37,9 +37,9 @@ const FreePredictions = (props: Props) => {
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
-            <TableCell align="right">Game</TableCell>
-            <TableCell align="right">Prediction</TableCell>
-            <TableCell align="right">Odd</TableCell>
+            <TableCell align="left">Match</TableCell>
+            <TableCell align="left">Prediction</TableCell>
+            <TableCell align="left">Odd</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
