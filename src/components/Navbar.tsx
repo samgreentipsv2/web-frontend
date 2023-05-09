@@ -43,7 +43,7 @@ import { useSnapCarousel } from 'react-snap-carousel';
 
 
 
-const drawerWidth = 240;
+const drawerWidth = 180;
 
 interface Props {
   /**
@@ -66,14 +66,7 @@ const [value, setValue] = React.useState(0);
   const email = auth()?.email
 const [firstName, setfirstName] = useState<string>("");
 
-const scrollbar = React.useRef<BaseScrollbar | null>(null);
 
-const { scrollRef } = useSnapCarousel();
-
-  useEffect(() => {
-    console.log(scrollbar.current);
-    
-  }, []);
 
 
 
@@ -192,7 +185,7 @@ if (isAuthenticated()){
     <Box   sx={{  display: 'flex' }}>
     
       <AppBar
-        position="fixed"
+        position="absolute"
         sx={{backgroundColor:"whitesmoke",
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
