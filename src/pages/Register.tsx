@@ -88,13 +88,13 @@ const RegisterFn = async (event:any) => {
   event.preventDefault()
   try{
 await axios.post(`${import.meta.env.VITE_SERVER_URL}api/auth/users/`,
-  JSON.stringify({
+  {
     first_name: firstName,
     last_name: LastName,
     email: Email,
     password: Password,
     re_password: ConfirmPassword
-  }),
+  },
   {
   headers: { 'Content-Type': 'application/json',
 },

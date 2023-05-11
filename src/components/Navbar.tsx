@@ -198,9 +198,9 @@ if (isAuthenticated()){
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: -16, display: { sm: 'none' } }}
+            sx={{ mr: -12, display: { sm: 'none' } }}
           >
-            <MenuIcon sx={{color:'black', fontSize:'28px' }} />
+            <MenuIcon sx={{color:'black', fontSize:'28px'}} />
           </IconButton>
           {  isAuthenticated() ? 
           <span className='avatar'><img src={Avatar}></img> <p>{firstName}</p></span>
@@ -259,7 +259,7 @@ if (isAuthenticated()){
         <Outlet />
     
   
-
+<div className='foot'>
   <div className='footer'>
       <span className='footertxt'>
       <span><p ><a href='/about'>About Us</a></p> <p><a href='/contact'>Contact Us</a></p></span>
@@ -273,6 +273,7 @@ if (isAuthenticated()){
        <a target='_blank' href='https://wa.me/2347049976525'><WhatsAppIcon sx={{height: "44px", width: "44px", color: "white", margin: "18px"}}/></a>
       </span>
       <span className='copyright'><p>Copyright 2023 | SamGreen Tips</p></span>
+  </div>
   </div>
 
   <div>
