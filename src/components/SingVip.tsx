@@ -103,9 +103,9 @@ const SingVip = ({category_name}: catProps) => {
         <TableHead>
           <TableRow>
             {/* <TableCell>Date</TableCell> */}
-            <TableCell align="left">Match</TableCell>
-            <TableCell align="left">Prediction</TableCell>
-            <TableCell align="left">Odd</TableCell>
+            <TableCell sx={{color:"#035A04"}} align="left">Match</TableCell>
+            <TableCell sx={{color:"#035A04"}} align="left">Prediction</TableCell>
+            <TableCell sx={{color:"#035A04"}} align="left">Odd</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
