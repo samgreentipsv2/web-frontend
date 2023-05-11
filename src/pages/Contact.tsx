@@ -65,6 +65,15 @@ const Contact = () => {
         </form>
 
       </span>
+
+
+      <h3>Reach Us At</h3>
+
+      <p className='homeal'>
+      For support: <br /> support@samgreentips.com <br /> 
+For General Enquiries: <br /> contact@samgreentips.com <br /> 
+For Marketing, Advertisement & Commercial Enquiries:<br />  marketing@samgreentips.com <br /> 
+      </p>
       
       </div>
       </>

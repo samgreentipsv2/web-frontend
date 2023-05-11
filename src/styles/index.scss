@@ -719,6 +719,8 @@ span.MuiBottomNavigationAction-label{
 
 
 .home-sub2{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     color: white;
     background-color: #000;
     padding-left: 42px;
@@ -733,12 +735,19 @@ span.MuiBottomNavigationAction-label{
 }
 
 .homeal{
-    font-size: 20px;
+    font-size: 15px;
     color: whitesmoke;
     line-height: 33px;
     display: flex;
-    background-color: grey;
-    padding: 30px;
+    background-color: $base-color2;
+    opacity: 20;
+    padding: 15px 20px;
+    text-align: left;
+}
+
+
+#message{
+    height: 200px;
 }
 
 

@@ -34,7 +34,8 @@ const RecentVip = (props: Props) => {
       <h5 className='home-sub2'>  DON'T GAMBLE, BET SMART 💡</h5>
       <span className='bgash'>
       <p className='homeal'>Get the most out of our precise daily predictions with up to "2 odds" daily and maximize your profits. 
-Take advantage of our VIP service with up to 95% accuracy.</p>
+Take advantage of our VIP service with up to 95% accuracy.
+Our team of experts recommends this VIP for individuals who view betting as a strategic means of boosting their daily earnings.</p>
 </span>
        <ul className='recvip'
         ref={scrollRef}
@@ -53,11 +54,7 @@ Take advantage of our VIP service with up to 95% accuracy.</p>
     <span className='iframe'>
    <a href='/vip' ><button className='btn1'>Join VIP</button></a>
    </span>
-
-   <p className='homeal'>
-   Our team of experts recommends this VIP for individuals who view betting as a strategic means of boosting their daily earnings.
-   </p>
-    
+  
     </div>
   )
 }
