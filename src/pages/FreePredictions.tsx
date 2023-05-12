@@ -37,9 +37,10 @@ const FreePredictions = (props: Props) => {
         <TableHead>
           <TableRow>
             <TableCell sx={{color:"#035A04"}}>Date</TableCell>
+            <TableCell sx={{color:"#035A04"}} align="left">league</TableCell>
             <TableCell sx={{color:"#035A04"}} align="left">Match</TableCell>
             <TableCell  sx={{color:"#035A04"}} align="left">Prediction</TableCell>
-            <TableCell sx={{color:"#035A04"}} align="left">Odd</TableCell>
+            
           </TableRow>
         </TableHead>
         <TableBody>
@@ -51,9 +52,10 @@ const FreePredictions = (props: Props) => {
               <TableCell component="th" scope="row">
                   {new Date(row.time).toDateString()}
               </TableCell>
+              <TableCell align="left">{row.league}</TableCell>
               <TableCell align="left">{row.match}</TableCell>
               <TableCell align="left">{row.category__category_name}</TableCell>
-              <TableCell align="left">{row.odd}</TableCell>
+              
             </TableRow>
           ))}
         </TableBody>
