@@ -115,8 +115,17 @@ setConfirmPassword('');
 
     }) 
 } catch (err) {
-  if (err && err instanceof Error) setErrMsg(err.message);
-  console.log("Error :", err);
+  if (axios.isAxiosError(err)) {
+    console.log(err.status)
+    console.error(err.response?.data.password[0]);
+    setErrMsg(err.response?.data.password[0])
+    // Do something with this error...
+  } else {
+    console.error(err);
+  }
+  // if (err && err instanceof Error) 
+  // console.log("Error :", err.name);
+  // setErrMsg(err.)
 }
 
 }
@@ -142,8 +151,8 @@ setConfirmPassword('');
 
     <label htmlFor="firstname">
       First Name:
-      <FontAwesomeIcon icon={faCheck} className={validFirstName ? "valid" : "hide"} />
-      <FontAwesomeIcon icon={faTimes} className={validFirstName || !firstName ? "hide" : "invalid"} />
+      {/* <FontAwesomeIcon icon={faCheck} className={validFirstName ? "valid" : "hide"} /> */}
+      {/* <FontAwesomeIcon icon={faTimes} className={validFirstName || !firstName ? "hide" : "invalid"} /> */}
     </label>
         <input
           type="text"
@@ -159,20 +168,20 @@ setConfirmPassword('');
         onChange={(e)=> {setfirstName(e.target.value)}} />
 
       
-      <p id="uidnote" className={firstNameFocus && firstName && !validFirstName ? "instructions" : "offscreen"}>
+      {/* <p id="uidnote" className={firstNameFocus && firstName && !validFirstName ? "instructions" : "offscreen"}>
   <FontAwesomeIcon icon={faInfoCircle} />
   4 to 24 characters.<br />
   Must begin with a letter.<br />
   Letters, numbers, underscores, hyphens allowed.
-</p>
+</p> */}
 
 
 {/* lastname */}
 
 <label htmlFor="lastname">
       Last Name:
-      <FontAwesomeIcon icon={faCheck} className={validLastName ? "valid" : "hide"} />
-      <FontAwesomeIcon icon={faTimes} className={validLastName || !LastName ? "hide" : "invalid"} />
+      {/* <FontAwesomeIcon icon={faCheck} className={validLastName ? "valid" : "hide"} /> */}
+      {/* <FontAwesomeIcon icon={faTimes} className={validLastName || !LastName ? "hide" : "invalid"} /> */}
     </label>
         <input
           type="text"
@@ -186,12 +195,12 @@ setConfirmPassword('');
         value={LastName}
         onChange={(e)=> {setLastName(e.target.value)}} />
 
-    <p id="uidnote" className={LastNameFocus && LastName && !validLastName ? "instructions" : "offscreen"}>
+    {/* <p id="uidnote" className={LastNameFocus && LastName && !validLastName ? "instructions" : "offscreen"}>
       <FontAwesomeIcon icon={faInfoCircle} />
       4 to 24 characters.<br />
       Must begin with a letter.<br />
       Letters, numbers, underscores, hyphens allowed.
-    </p>
+    </p> */}
        
        
        
@@ -260,7 +269,7 @@ setConfirmPassword('');
 </p>
 
 
-<span className='btnspn'><button className='btn1' disabled={!validFirstName  || !validConfirmPassword ? true : false}>Sign Up</button></span>
+<span className='btnspn'><button className='btn1' >Sign Up</button></span>
     </form>
     <p>Already Have An Account? <Link to='/login'>Login</Link>  </p>
   </>

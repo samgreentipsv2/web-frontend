@@ -81,8 +81,17 @@ const Login: React.FC = () => {
             alert("Login Successful!")
             
           })} catch (err) {
-            if (err && err instanceof Error) setErrMsg("Invalid Login Details");
-            console.log("Error :", err);
+            if (axios.isAxiosError(err)) {
+              console.log(err.status)
+              console.error(err.response?.data.non_field_errors[0]);
+              setErrMsg(err.response?.data.non_field_errors[0])
+              // Do something with this error...
+            } else {
+              console.error(err);
+            }
+            // if (err && err instanceof Error) 
+            // console.log("Error :", err.name);
+            // setErrMsg(err.)
           }
 }
 
