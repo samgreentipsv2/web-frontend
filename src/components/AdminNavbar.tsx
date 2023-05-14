@@ -4,7 +4,7 @@ type Props = {}
 
 const AdminNavbar = (props: Props) => {
   return (
-    <div>AdminNavbar</div>
+    <div></div>
   )
 }
 
