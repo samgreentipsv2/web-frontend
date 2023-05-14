@@ -54,7 +54,7 @@ const FreePredictions = (props: Props) => {
               </TableCell>
               <TableCell align="left">{row.league}</TableCell>
               <TableCell align="left">{row.match}</TableCell>
-              <TableCell align="left">{row.category__category_name}</TableCell>
+              <TableCell align="left">{row.prediction}</TableCell>
               
             </TableRow>
           ))}
