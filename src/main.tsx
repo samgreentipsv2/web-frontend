@@ -34,7 +34,7 @@ import AdminLogin from './components/AdminLogin';
 import { freeloader } from './pages/FreeInplay';
 import About from './pages/About';
 import Checkout from './pages/Checkout';
-
+import GamesByCat from './pages/GamesByCat';
 import Lottie from 'lottie-react';
 import spinner from './assets/spinner.json'
 import AdminUser from './pages/AdminUser';
@@ -53,6 +53,7 @@ const Router = createBrowserRouter(
        <Route path='whytrustus' element={<WhyTrustUs/>}/>
        <Route path='termsofuse' element={<TermsOfUse/>}/>
        <Route path='contact' element={<Contact/>}/>
+       <Route path='games' element={<GamesByCat/>}/>
        <Route path='free-predictions' element={<FreePredictions/>}/>
        <Route path='pricing' element={<Pricing />} loader={planLoader}/>
        <Route path='vip' element={<RequireAuth loginPath={'/login'}><VIP/></RequireAuth>}/>

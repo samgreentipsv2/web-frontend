@@ -29,7 +29,7 @@ export default function FAQs() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          3 Well analyzed  tickets with proper strategies adopted to make you profits regardless. 
+          1 Well analyzed  tickets with proper strategies adopted to make you profits regardless. 
           </Typography>
         </AccordionDetails>
       </Accordion>

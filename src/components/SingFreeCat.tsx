@@ -10,13 +10,10 @@ const SingFreeCat = (props: Props) => {
     const navigate = useNavigate();
     
 
-    const viewGame = ()=>{
-        navigate('/')
-    }
   return (
  
           <>
-          <a href='/free-predictions'><div className='tipcatbox'>
+          <a href={`/games?category=${props.name}`}><div className='tipcatbox'>
               <span><strong><p>FREE!</p></strong></span>
       <h2 >{props.name}</h2>
      

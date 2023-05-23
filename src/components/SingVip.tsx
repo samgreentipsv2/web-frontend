@@ -99,7 +99,7 @@ const SingVip = ({category_name}: catProps) => {
           <DialogContentText id="alert-dialog-description">
 
           { <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
+      <Table sx={{ minWidth: 300, marginLeft: -2 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
             {/* <TableCell>Date</TableCell> */}
@@ -126,13 +126,14 @@ const SingVip = ({category_name}: catProps) => {
         <>
        
         {/* <span className='vipodds'><p><strong>Total Odds</strong>: {vipodds}</p></span> */}
-        <span className='vipodds'><p><strong>BetKing</strong> : {betking}</p></span>
+       <div className='vipalign'> <span className='vipodds'><p><strong>BetKing</strong> : {betking}</p></span>
         <span className='vipodds'><p><strong>Helabet</strong> :{helabet}</p></span>
         <span className='vipodds'><p><strong>1xbet</strong> :{onexbet}</p></span>
         <span className='vipodds'><p><strong>Sportybet</strong> : {sportybet}</p></span>
         <span className='vipodds'><p><strong>22bet</strong> :{twentytwobet}</p></span>
         <span className='vipodds'><p><strong>Bet9ja</strong> :{bet9ja}</p></span>
         <span className='vipodds'><p><strong>Date </strong>: {date}</p></span>
+        </div>
         
         </>
         </TableBody>
