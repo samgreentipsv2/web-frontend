@@ -117,6 +117,7 @@ setConfirmPassword('');
 } catch (err) {
   if (axios.isAxiosError(err)) {
     console.log(err.status)
+    
     console.error(err.response?.data.password[0]);
     setErrMsg(err.response?.data.password[0])
     // Do something with this error...

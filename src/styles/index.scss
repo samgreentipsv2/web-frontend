@@ -15,7 +15,6 @@ $base-color2: #C87711;
 
 
 #root{
-    display: flex;
     min-height: 100%;
     width: 100%;
     overflow-y: auto;
@@ -46,7 +45,6 @@ main{
     width: 100%;
     -webkit-overflow-scrolling: touch;
     position: absolute;
-    flex: 1;
     
 }
 
@@ -443,6 +441,12 @@ transition: all .4s ease-in-out;
     margin-top: 18px;
 
    
+
+}
+
+.foot{
+    margin-bottom: -22px;
+    margin-top: 245px;
 
 }
 
