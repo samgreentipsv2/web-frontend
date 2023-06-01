@@ -37,7 +37,8 @@ import {Scrollbar} from 'smooth-scrollbar-react';
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { useSnapCarousel } from 'react-snap-carousel';
 import Switch from "react-switch";
-
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 
 
@@ -185,7 +186,7 @@ if (isAuthenticated()){
 }
         </List>
 
-        <Switch offColor='#035A04' onColor='#C87711' onChange={toggleTheme} checked ={theme === "dark"}></Switch>
+        <Switch uncheckedIcon={<LightModeIcon sx={{ height:'25px', width:'23px'}}/>} checkedIcon={<DarkModeIcon sx={{ height:'25px', width:'23px'}}/>} offColor='#035A04' onColor='#C87711' onChange={toggleTheme} checked ={theme === "dark"}></Switch>
       </nav>
     </div>
   </>
