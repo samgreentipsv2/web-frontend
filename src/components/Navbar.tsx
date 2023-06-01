@@ -21,7 +21,7 @@ import '../styles/index.scss';
 import { Outlet, Link, useLoaderData, useNavigate, redirect } from 'react-router-dom';
 import {useAuthUser, useIsAuthenticated, useSignOut} from 'react-auth-kit';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -36,6 +36,7 @@ import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
 import {Scrollbar} from 'smooth-scrollbar-react';
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { useSnapCarousel } from 'react-snap-carousel';
+import Switch from "react-switch";
 
 
 
@@ -63,9 +64,18 @@ export default function Navbar(props: Props) {
 
 const [value, setValue] = React.useState(0);
 
-  const email = auth()?.email
+const email = auth()?.email
 const [firstName, setfirstName] = useState<string>("");
 
+
+ const [theme, setTheme] = useState("dark");
+
+ const ThemeContext = createContext(null);
+
+
+const toggleTheme = () => {
+  setTheme((curr) => (curr === "light" ? "dark" : "light"));
+};
 
 
 
@@ -109,11 +119,12 @@ if (isAuthenticated()){
 
   const drawer = (
     <>
-    <div>
+    <div id={theme}>
     
       <Toolbar />
       { isAuthenticated()?
       <span className='avatarm'><img src={Avatar}></img> <p>{firstName}</p></span>: <p></p>}
+
       <Divider />
       <nav className='navhov' aria-label="main navbar links">
         <List >
@@ -173,6 +184,8 @@ if (isAuthenticated()){
                 </ListItem>
 }
         </List>
+
+        <Switch offColor='#035A04' onColor='#C87711' onChange={toggleTheme} checked ={theme === "dark"}></Switch>
       </nav>
     </div>
   </>
@@ -182,9 +195,11 @@ if (isAuthenticated()){
 
   return (
     <>
-    <Box   sx={{  display: 'flex' }}>
+    <Box   sx={{  display: 'flex' }} id={theme}>
     
       <AppBar
+
+      id={theme}
         position="absolute"
         sx={{backgroundColor:"whitesmoke",
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -192,15 +207,22 @@ if (isAuthenticated()){
           
         }}
       >
-        <Toolbar className='headerbar'>
+        <Toolbar className='headerbar' id={theme}>
+
+          
+          
          <a  href='/'><img className='errlogo headerlog' src={Logo}></img></a>
+
+         
+         
            <IconButton
+           
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: -12, display: { sm: 'none' } }}
           >
-            <MenuIcon sx={{color:'black', fontSize:'28px'}} />
+            <MenuIcon className='iconButton'  sx={{color:'black', fontSize:'28px'}} />
           </IconButton>
           {  isAuthenticated() ? 
           <span className='avatar'><img src={Avatar}></img> <p>{firstName}</p></span>
@@ -240,6 +262,7 @@ if (isAuthenticated()){
           {drawer}
         </Drawer>
         <Drawer
+        id={theme}
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
@@ -251,6 +274,7 @@ if (isAuthenticated()){
         </Drawer>
       </Box>
       <Box
+      id={theme}
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >

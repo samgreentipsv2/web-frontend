@@ -41,6 +41,8 @@ import AdminUser from './pages/AdminUser';
 import AdminGames from './pages/AdminGames';
 import TermsOfUse from './pages/TermsOfUse';
 
+
+
 const Router = createBrowserRouter(
   createRoutesFromElements(
     
@@ -90,5 +92,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
      
 
        </AuthProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

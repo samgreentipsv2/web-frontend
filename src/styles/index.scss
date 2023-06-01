@@ -16,11 +16,16 @@ $base-color2: #C87711;
 
 #root{
     min-height: 100%;
+    background-color: #000;
     width: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
 
+
+#dark p{
+    color: $base-color2;
+}
 
 
 
@@ -31,11 +36,18 @@ html {
     -webkit-overflow-scrolling: touch;
     font-family: 'Roboto';
     font-size: 12px;
-    color: black;
+    background-color: black;
     max-width: 100%;
     height: 100%;
     
 }
+
+#light {
+    background-color: white;}
+  
+  #dark {
+    background-color: black;
+  }
 
 
 main{
@@ -47,6 +59,21 @@ main{
     position: absolute;
     
 }
+
+
+#light .main {
+    background-color: #fff;
+  }
+  
+  #dark .main {
+    background-color: black;
+  }
+
+
+
+
+  
+
 
 
 
@@ -283,6 +310,13 @@ form{
     margin-top: 20px;
 }
 
+
+#dark .navli{
+    color: $base-color2;
+}
+
+
+
 .navli:hover{
     background-color: #C87711;
     color: white;
@@ -297,6 +331,12 @@ form{
 
 .navhov{
     margin-left: 28px;
+}
+
+
+ #dark .iconButton{
+     color: $base-color2;
+
 }
 
 
@@ -374,6 +414,15 @@ transition: all .4s ease-in-out;
 }
 
 
+#dark .avatarm{
+
+    p{
+        color: $base-color2;
+    }
+
+}
+
+
 .planbox{
     background-color: $base-color;
     display: flex;
@@ -442,6 +491,18 @@ transition: all .4s ease-in-out;
 
    
 
+}
+
+
+#dark .viphdtxt{
+
+    h1,h5{
+        color:$base-color2;
+    }
+
+    h3{
+        color: white;
+    }
 }
 
 .foot{
@@ -564,6 +625,11 @@ transition: all .4s ease-in-out;
 }
 
 
+#dark .blnkspn {
+    color: $base-color2;
+}
+
+
 .betofday{
     margin-top: 60px;
     margin-bottom: 30px;
@@ -638,6 +704,11 @@ span.MuiBottomNavigationAction-label{
 }
 
 
+#dark .home-sub{
+    color: $base-color2;
+}
+
+
 .tipcatbox{
     height: 90px;
     width: 150px;
@@ -673,6 +744,8 @@ span.MuiBottomNavigationAction-label{
     }
 }
 
+
+
 .freebox{
     margin: 0px -2px;
     display: flex;
@@ -686,7 +759,7 @@ span.MuiBottomNavigationAction-label{
 .newsbanner{
     margin-top: 30px;
     height: 250px;
-    width: px;
+    // width: px;
     display: flex;
     background-color: $base-color2;
     justify-content: center;
@@ -744,7 +817,7 @@ span.MuiBottomNavigationAction-label{
 
 .homeal{
     font-size: 15px;
-    color: whitesmoke;
+    
     line-height: 33px;
     display: flex;
     background-color: $base-color2;
@@ -752,6 +825,13 @@ span.MuiBottomNavigationAction-label{
     padding: 15px 20px;
     text-align: left;
 }
+
+#dark .homeal{
+    background-color: whitesmoke;
+}
+
+
+
 
 
 #message{
@@ -764,6 +844,13 @@ span.MuiBottomNavigationAction-label{
     flex-wrap: wrap;
     padding-left: 5px;
     margin-top: 17px;
+}
+
+
+
+
+#dark .tablecell{
+    color: $base-color2;
 }
 
 

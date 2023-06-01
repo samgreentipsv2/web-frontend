@@ -93,10 +93,10 @@ export default function BetOfTheDay() {
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
 
       
-        <Tabs sx={{indicatorColor:'#035A04'}} variant="scrollable" value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs  sx={{indicatorColor:'#035A04'}} variant="scrollable" value={value} onChange={handleChange} aria-label="basic tabs example">
 
 
-        {games?.map((row:any) => (<Tab key={row[0].time} label={new Date(row[0].time).toDateString()} {...a11yProps(0)} /> ))}
+        {games?.map((row:any) => (<Tab className='tablecell'  key={row[0].time} label={new Date(row[0].time).toDateString()} {...a11yProps(0)} /> ))}
          
         </Tabs>
       </Box>
@@ -111,9 +111,9 @@ export default function BetOfTheDay() {
          <TableHead>
 
            <TableRow>
-             <TableCell sx={{color:"#035A04"}} align="left">League</TableCell>
-             <TableCell sx={{color:"#035A04"}} align="left">Match</TableCell>
-             <TableCell sx={{color:"#035A04"}} align="left">Prediction</TableCell>          
+             <TableCell className='tablecell' sx={{color:"#035A04"}} align="left">League</TableCell>
+             <TableCell className='tablecell' sx={{color:"#035A04"}} align="left">Match</TableCell>
+             <TableCell className='tablecell' sx={{color:"#035A04"}} align="left">Prediction</TableCell>          
            </TableRow>
 
          </TableHead>
