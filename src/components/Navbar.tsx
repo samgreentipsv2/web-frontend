@@ -187,8 +187,9 @@ if (isAuthenticated()){
         </List>
 
         
-
-        <Switch uncheckedIcon={<LightModeIcon sx={{ color: "#C87711",height:'25px', width:'23px'}}/>} checkedIcon={<DarkModeIcon sx={{ color: "#035A04",height:'25px', width:'23px'}}/>} offColor='#035A04' onColor='#C87711' onChange={toggleTheme} checked ={theme === "dark"}></Switch>
+        <span className='switch'>
+        <Switch className='switch' uncheckedIcon={<LightModeIcon sx={{ color: "#C87711",height:'25px', width:'23px'}}/>} checkedIcon={<DarkModeIcon sx={{ color: "#035A04",height:'25px', width:'23px'}}/>} offColor='#035A04' onColor='#C87711' onChange={toggleTheme} checked ={theme === "dark"}></Switch>
+        </span>
       </nav>
     </div>
   </>
