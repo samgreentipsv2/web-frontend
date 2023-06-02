@@ -294,7 +294,8 @@ form{
 }
 
 .regimg{
-    display: none;
+    margin-top: 22px;
+    height: 185px;
 }
 
 .form1{
@@ -346,12 +347,12 @@ form{
 
 .herotxt1{
     color: $base-color;
-    font-size: 29px;
+    font-size: 23px;
     margin-top: 14px;
 }
 
 .herotxt2{
-    font-size: 29px;
+    font-size: 23px;
     margin-top: 14px;
     color: $base-color2;
 }
@@ -511,6 +512,13 @@ transition: all .4s ease-in-out;
 
 }
 
+.herotxtsect{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+
+}
+
 
 
 .footer{
@@ -619,7 +627,7 @@ transition: all .4s ease-in-out;
     padding: 17px 0px;
 
     p{
-        font-size: 35px;
+        font-size: 23px;
         font-weight: 800;
     }
 }
@@ -817,7 +825,7 @@ span.MuiBottomNavigationAction-label{
 
 .homeal{
     font-size: 15px;
-    
+    color: white;
     line-height: 33px;
     display: flex;
     background-color: $base-color2;
@@ -921,9 +929,9 @@ span.MuiBottomNavigationAction-label{
     }
 
     .regimg{
-        margin-right:-183px;
+        
         display: block;
-        height: 250px;
+        height: 450px;
     }
 
     .form1{
@@ -933,10 +941,8 @@ span.MuiBottomNavigationAction-label{
 
 
     .hersctn{
-        display: flex;
-        justify-content: space-between;
         margin: 3px 50px;
-        padding-right: 140px;
+        
         
     }
 
@@ -1030,6 +1036,19 @@ span.MuiBottomNavigationAction-label{
     .home-sub2{
         padding-left: 392px;
 
+    }
+
+
+    .herotxt1{
+        font-size: 57px;
+    }
+
+    .herotxt2{
+        font-size: 57px;
+    }
+
+    .blnkspn p{
+        font-size: 57px;
     }
     
 

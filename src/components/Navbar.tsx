@@ -69,7 +69,7 @@ const email = auth()?.email
 const [firstName, setfirstName] = useState<string>("");
 
 
- const [theme, setTheme] = useState("dark");
+ const [theme, setTheme] = useState("light");
 
  const ThemeContext = createContext(null);
 
@@ -186,7 +186,9 @@ if (isAuthenticated()){
 }
         </List>
 
-        <Switch uncheckedIcon={<LightModeIcon sx={{ height:'25px', width:'23px'}}/>} checkedIcon={<DarkModeIcon sx={{ height:'25px', width:'23px'}}/>} offColor='#035A04' onColor='#C87711' onChange={toggleTheme} checked ={theme === "dark"}></Switch>
+        
+
+        <Switch uncheckedIcon={<LightModeIcon sx={{ color: "#C87711",height:'25px', width:'23px'}}/>} checkedIcon={<DarkModeIcon sx={{ color: "#035A04",height:'25px', width:'23px'}}/>} offColor='#035A04' onColor='#C87711' onChange={toggleTheme} checked ={theme === "dark"}></Switch>
       </nav>
     </div>
   </>
