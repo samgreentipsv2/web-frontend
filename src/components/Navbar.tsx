@@ -122,7 +122,7 @@ if (isAuthenticated()){
     <>
     <div id={theme}>
     
-      <Toolbar />
+      <Toolbar sx={{marginTop: "-44px"}} />
       { isAuthenticated()?
       <span className='avatarm'><img src={Avatar}></img> <p>{firstName}</p></span>: <p></p>}
 
