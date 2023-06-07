@@ -1,6 +1,6 @@
 import React from 'react';
 import herbtnimg from '../assets/herbtn.svg';
-import  heroimg from '../assets/heroimg.svg';
+import  heroimg from '../assets/heroimg.webp';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Lottie from 'lottie-react';
 import Blinking from '../assets/blink.json'
