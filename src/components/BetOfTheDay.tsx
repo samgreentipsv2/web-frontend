@@ -128,6 +128,7 @@ export default function BetOfTheDay() {
                <TableCell align="left">{game.league}</TableCell>
                <TableCell align="left">{game.match}</TableCell>
                <TableCell align="left">{game.prediction}</TableCell>            
+                          
              </TableRow>
 )}
               

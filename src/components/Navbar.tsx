@@ -122,12 +122,12 @@ if (isAuthenticated()){
     <>
     <div id={theme}>
     
-      <Toolbar sx={{marginTop: "-44px"}} />
+      <Toolbar  sx={{  marginTop: "-44px"}} />
       { isAuthenticated()?
       <span className='avatarm'><img src={Avatar}></img> <p>{firstName}</p></span>: <p></p>}
 
       <Divider />
-      <nav className='navhov' aria-label="main navbar links">
+      <nav className='navhov' aria-label="main navbar links" >
         <List >
           <ListItem  disablePadding>
           

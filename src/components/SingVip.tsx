@@ -106,6 +106,7 @@ const SingVip = ({category_name}: catProps) => {
             <TableCell sx={{color:"#035A04"}} align="left">Match</TableCell>
             <TableCell sx={{color:"#035A04"}} align="left">Prediction</TableCell>
             <TableCell sx={{color:"#035A04"}} align="left">Odd</TableCell>
+            <TableCell sx={{color:"#035A04"}} align="left">Time</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -120,6 +121,7 @@ const SingVip = ({category_name}: catProps) => {
               <TableCell align="left">{row.match}</TableCell>
               <TableCell align="left">{row.Prediction}</TableCell>
               <TableCell align="left">{row.odd}</TableCell>
+              <TableCell align="left">{row.time.toLocaleString().slice(11, 16)}</TableCell>
             </TableRow>
           ))}
 

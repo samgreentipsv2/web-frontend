@@ -20,7 +20,7 @@ const RecentVip = (props: Props) => {
               withCredentials: true
       }
         ).then((res)=>{
-          console.log(res.data.results)
+          // console.log(res.data.results)
           setresults(res.data.results)
           // return (res.data.user)
         })
