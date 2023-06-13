@@ -58,7 +58,7 @@ const Contact = () => {
           required
           aria-describedby="uidnote"
 
-        value={email}
+        value={message}
         onChange={(e)=> {setmessage(e.target.value)}} />
 
     <button className='btn1' onSubmit={onSubmit}>Send</button>
